@@ -39,4 +39,6 @@ public class Hotel {
     @Embedded
     private HotelContactInfo hotelContactInfo;
 
+    @Column(nullable = false)
+    private boolean active;
 }
