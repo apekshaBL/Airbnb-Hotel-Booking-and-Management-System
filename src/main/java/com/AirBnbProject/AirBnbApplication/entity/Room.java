@@ -22,7 +22,7 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "hotel_id",nullable = false)
     private Hotel hotel;
 
@@ -33,10 +33,10 @@ public class Room {
     private BigDecimal basePrice;
 
     @Column(columnDefinition = "TEXT[]")
-    private String photos;
+    private String[] photos;
 
     @Column(columnDefinition = "TEXT[]")
-    private String amenities;
+    private String[] amenities;
 
     @Column(nullable = false)
     private  Integer totalCount;
