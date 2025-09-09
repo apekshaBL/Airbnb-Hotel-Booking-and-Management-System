@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 @Data
 public class RoomDto {
-    private long id;
+    private Long id;
 
     private String type;
     private BigDecimal basePrice;
