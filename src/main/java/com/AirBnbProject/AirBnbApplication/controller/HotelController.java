@@ -40,7 +40,11 @@ public class HotelController {
      hotelService.deleteHotelById(id);
      return ResponseEntity.noContent().build();
    }
-
+ @PatchMapping("/updateFewThing/{id}")
+    public ResponseEntity<Void>activateHotel(@PathVariable Long id){
+      hotelService.activateHotel(id);
+      return ResponseEntity.noContent().build();
+ }
 
 
 
