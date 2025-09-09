@@ -5,8 +5,8 @@ import com.AirBnbProject.AirBnbApplication.dto.RoomDto;
 import java.util.List;
 
 public interface RoomService {
-    RoomDto createRoom(RoomDto roomDto);
-    RoomDto getRoomById(Long id);
-    List<RoomDto> getAllRooms();
-    void deleteRoomById(Long id);
+    RoomDto createNewRoom(Long HotelId,RoomDto roomDto);
+    RoomDto getRoomById(Long RoomId);
+    List<RoomDto> getAllRoomsOfHotel(Long HotelId);
+    void deleteRoomById(Long RoomId);
 }

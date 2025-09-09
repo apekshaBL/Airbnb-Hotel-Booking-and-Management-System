@@ -48,4 +48,5 @@ public class Hotel {
 
     @ManyToOne
     private User owner;
+
 }
