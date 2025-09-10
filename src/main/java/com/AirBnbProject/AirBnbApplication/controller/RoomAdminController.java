@@ -25,12 +25,12 @@ public class RoomAdminController {
         return ResponseEntity.ok(roomService.getAllRoomsOfHotel(hotelId));
     }
 
-    @GetMapping("/getByID/{id}")
+    @GetMapping("/getByID/{RoomId}")
     public  ResponseEntity<RoomDto>getRoomsById(@PathVariable Long hotelId,@PathVariable Long RoomId){
         return ResponseEntity.ok(roomService.getRoomById(RoomId));
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/{RoomId}")
     public ResponseEntity<RoomDto> deleteById(@PathVariable Long hotelId,@PathVariable Long RoomId){
         roomService.deleteRoomById(RoomId);
         return ResponseEntity.noContent().build();
